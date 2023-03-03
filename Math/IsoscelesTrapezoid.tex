@@ -1,0 +1,78 @@
+\documentclass[12pt, a5paper, landscape]{article}
+
+\usepackage[left=1cm, right=1cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usetikzlibrary{babel}
+\usepackage{mathpazo}
+\usepackage{multicol}
+\usepackage[pdftex, unicode]{hyperref}
+\hypersetup{ unicode = true,
+	pdfauthor={Luis Carrillo Gutiérrez},
+	pdftitle={Ejemplo de Trapecio isósceles},
+	pdfsubject={Trapecio isósceles},
+	pdfkeywords={trapecio, trapecio isósceles, teorema de Ptolomeo}
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\setlength{\columnsep}{1.5cm}
+\setlength{\columnseprule}{0.2pt}
+
+\begin{document}
+
+\paragraph{Trapecio isósceles -- } 
+\begin{multicols}{2}
+\noindent Hallar $\overline{AB}$, si el trapecio es isósceles, sus ángulos agudos miden la mitad de los ángulos obtusos, además $\overline{DC} = 20\;m$. \\
+
+\begin{tikzpicture}
+\draw (0, 0) -- (4, 0) -- (3, 2) -- (1, 2) -- (0, 0);
+\draw (1, 2) -- (4,0);
+\draw (.91, 1.8) -- (1.2, 1.6) -- (1.325, 1.78);
+\draw (0, 0) node[left]{$D$};
+\draw (1, 2.08) node[left]{$A$};
+\draw (3, 2.08) node[right]{$B$};
+\draw (4, 0) node[right]{$C$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw (0, 0) -- (4, 0) -- (3, 2) -- (1, 2) -- (0, 0);
+\draw (1, 2) -- (4,0);
+\draw (.91, 1.8) -- (1.2, 1.6) -- (1.325, 1.78);
+\draw[dashed] (-1, 2) -- (1, 2);
+\draw[dashed] (-1, 0) -- (0, 0);
+\draw (2, -.3) node{$a$}; % [above]
+\draw (2, 2) node[above]{$b$};
+\draw (.4, 1) node[left]{$c$};
+\draw (3.6, 1) node[right]{$c$};
+\draw (1.65, 1) node[right]{$p$};
+\draw (0.4, 0.2) node{$\omega$};
+\draw (1.8, 1.76) node{$\theta$};
+\draw (0.6, 1.76) node{$\omega$};
+\end{tikzpicture}
+\\ 
+Por semejanza de ángulos.
+\begin{eqnarray*}
+& \empty \measuredangle\omega + 90^{\circ} + \measuredangle\theta = 180^{\circ} \quad\wedge\quad \measuredangle\omega = \dfrac{90^{\circ} + \angle\theta}{2} \\
+& \empty\measuredangle\omega + 90^{\circ} + 2\cdot\measuredangle\omega - 90^{\circ} = 180^{\circ} \\
+& \empty 3\cdot\measuredangle\omega = 180^{\circ} \quad\rightarrow\quad \measuredangle\omega = \dfrac{180^{\circ}}{3} = 60^{\circ}
+\end{eqnarray*}
+\noindent Por el {\tt teorema de Ptolomeo} y la definición de {\tt seno y coseno trigonométrico}, con $\omega = 60^{\circ},$ \\ $\;a = 20\,m$. 
+\begin{flalign*}
+& \empty p = \sqrt{ab + c^2} \quad\wedge\quad \sen \omega = \dfrac{p}{a} \quad\wedge\quad \cos \omega = \dfrac{c}{a} \\
+& \Rightarrow\quad p = \sqrt{ab + c^2} \\ % \rightarrow  
+& \Rightarrow\quad a\cdot\sen \omega \sqrt{20\cdot b + {(a\cdot\cos \omega)}^2} \\
+& \Rightarrow\quad 20\cdot\sen 60^{\circ} = \sqrt{20\cdot b + {(20\cdot\cos 60^{\circ})}^2} \\
+& \Rightarrow\quad 20\cdot \dfrac{\sqrt{3}}{2} = \sqrt{20 b + {(20\cdot\dfrac1{2})}^2} \\
+& \Rightarrow\quad 10 \sqrt{3} = \sqrt{20 b + {(10)}^2} \\
+& \Rightarrow\quad (10 \sqrt{3})^2 = (\sqrt{20 b + 100})^2 \\
+& \Rightarrow\quad 300 = 20 b + 100 \\
+& \Rightarrow\quad b = \dfrac{300 - 100}{20} \rightarrow\qquad  \framebox{\text{\tt 10\;m}}
+\end{flalign*}
+{\footnotesize {\tt Luis Carrillo Gutiérrez}, 2018}
+\end{multicols}
+
+\end{document}
