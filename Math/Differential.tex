@@ -1,0 +1,33 @@
+\documentclass[10pt, a5paper]{article}
+
+\usepackage[left=1.5cm,right=1.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{enumerate}
+\usepackage{verbatim}
+\usepackage{chemfig}
+\usepackage{mathpazo}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+% Derivadas
+$$
+\dfrac{dy}{dx} = y\text{'} = f\text{'}(x) = \lim_{h \to 0} \dfrac{f(x + h) - f(x)}{h} =\lim_{\Delta x \to 0} \dfrac{\Delta y}{\Delta x}
+$$
+
+$$
+\boxed{h = \Delta x = x - x_0}
+$$
+
+\begin{enumerate}
+\item{$\dfrac{dy}{dx} (c) = 0$}
+\item{$\dfrac{dy}{dx} (x) = 1$}
+\item{$\dfrac{dy}{dx} (x^{n}) = nx^{n - 1}$}
+\item{$\dfrac{dy}{dx} (\arcsen u) = \dfrac{u\text{'}}{\sqrt{1 - u^2}}$}
+\item{$\dfrac{dy}{dx} (\arccos u) = - \dfrac{u\text{'}}{\sqrt{1 - u^2}}$}
+\item{$\dfrac{dy}{dx} (\arctg u) = \dfrac{u\text{'}}{1 + u^2}$}
+\end{enumerate}
+
+\end{document}
