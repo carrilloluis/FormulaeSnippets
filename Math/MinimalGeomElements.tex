@@ -1,0 +1,41 @@
+\documentclass[10pt, a5paper]{article}
+
+\usepackage[left=1.5cm,right=1.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{babel}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+	\subsubsection*{Points} % Puntos
+	\begin{tikzpicture}
+		% \draw (0,0) node[left] {$A$};
+		\filldraw[black] (0, 2) circle (1pt) node[anchor=west]{$C$};
+		\filldraw[black] (3,-1) circle (1pt) node[anchor=west]{$K$};
+	\end{tikzpicture}
+
+	\subsubsection*{Line | Straight} % Recta
+	\begin{tikzpicture}
+		\draw[gray, thick, <->] (-1,-1) -- (2,2) node[anchor=west]{$f$};
+		\filldraw[black] (0, 0) circle (1.2pt) node[anchor=west]{$\;X$};
+		\filldraw[black] (1.2, 1.2) circle (1.2pt) node[anchor=west]{$\;Y$};
+	\end{tikzpicture}
+
+	\subsubsection*{Segment} % Segmento
+	\begin{tikzpicture}
+		\draw[gray, thick, -] (-2, 3) -- (3,0);
+		\filldraw[black] (-2, 3) circle (1.2pt) node[anchor=east]{$M\;$};
+		\filldraw[black] (3, 0) circle (1.2pt) node[anchor=west]{$\;N$};
+	\end{tikzpicture}
+
+	\subsubsection*{Semi straight} % Semirrecta
+	\begin{tikzpicture}
+		\draw[gray, thick, ->] (-2, 1) -- (4,3);
+		\filldraw[black] (-2, 1) circle (1.4pt) node[anchor=south]{$P$};
+		\filldraw[black] (3, 2.654) circle (1.4pt) node[anchor=south]{$T$};
+	\end{tikzpicture}
+\end{document}
