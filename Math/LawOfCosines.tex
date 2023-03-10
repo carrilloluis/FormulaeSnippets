@@ -1,0 +1,31 @@
+\documentclass[12pt, a5paper]{article}
+
+\usepackage[left=1.5cm,right=1.5cm,top=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{enumerate}
+\usepackage{verbatim}
+\usepackage{multicol}
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{babel}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+\subsection*{Ley de Cosenos}
+% Lei dos cossenos [PT]
+
+\begin{tikzpicture}
+	\draw[gray, thick] (.8, 1) -- (2, 3) -- (5, .1) -- (.8, 1);
+	\draw[black] (.8, 1.8) node{$b$};
+	\draw[black] (3.8, 1.8) node{$a$};
+	\draw[black] (2.5, 0.2) node{$c$};
+	\draw[black] (1.2, 1.2) node{$\alpha$};
+\end{tikzpicture}
+
+$$
+a^2 = b^2 + c^2 - 2 \cdot b \cdot c \cdot \cos \alpha
+$$
+\end{document}
