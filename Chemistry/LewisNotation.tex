@@ -1,0 +1,23 @@
+\documentclass[12pt, a5paper]{article}
+
+\usepackage[left=1.5cm,right=1.5cm,top=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{mathpazo}
+\usepackage{chemfig}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+\subsection*{Estructura de Lewis}
+% Modelo de puntos de Lewis
+\subsubsection*{Carbono}
+\Lewis{0.2.4.6., C} 
+
+\subsubsection*{Dos formas de la Molécula de Sulfuro de Hidrógeno}
+%\setatomsep{1.7em} 
+H \Lewis{0:2:4:6:,S} H \qquad\qquad \chemfig{H-\lewis{26,S}-H}
+
+% \Lewis{4.,Li} + \Lewis{0.2:4:6:,F} $\to$ $Li^{+}$ + \Lewis{0:2:4:6:,F}-
+\end{document}
