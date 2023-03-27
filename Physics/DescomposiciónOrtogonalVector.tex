@@ -1,0 +1,58 @@
+\documentclass[12pt, a5paper]{article}
+
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+%\usepackage{stix} % , bm}
+% \usepackage{fourier} % \usepackage{enumerate}
+% \usepackage[garamond]{mathdesign}
+%\usepackage{garamondx}
+\usepackage{tikz}
+% \usetikzlibrary{arrows}
+\usetikzlibrary{babel}
+% \usepackage{verbatim}
+
+%\usepackage[T1]{fontenc}
+%\geometry{textwidth=7cm}
+%\usepackage{tgbonum}
+% \usepackage{times} % Si funciona!!!
+%\usepackage{Lucida Sans Typewriter}
+%\usepackage{garamond}
+\usepackage{mathpazo} % GOOOD!!!!
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{ pdftitle = {Vectores},  pdfauthor = {Luis Carrillo Gutiérrez}, pdfsubject= {vector, componentes, descomposición ortogonal de un vector} }
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\subsection*{Descomposición Ortogonal de un vector}
+\begin{tikzpicture}
+\draw [thick, ->] (0, -1) -- (0, 3);
+\draw [thick, ->] (-1, 0) -- (6, 0);
+\draw (0, 3) node[left]{{\tt Y}};
+\draw (6, 0) node[below]{{\tt X}};
+\draw [very thick, ->] (0, 0) -- (5, 2.5);
+\draw [gray, dashed] (0, 2.5) -- (5, 2.5);
+\draw [gray, dashed] (5, 0) -- (5, 2.5);
+
+\draw (2, 1.4) node{$\vec{R}$};
+\draw (3, 0) node[below]{$\vec{R_x}$};
+\draw (0, 1.4) node[left]{$\vec{R_y}$};
+
+\draw (0.6, 0.0) arc [radius=0.6, start angle=0, end angle=25];
+\draw (0.95, 0.25) node{$\theta$};
+\end{tikzpicture}
+
+$$
+\vec{R} = \vec{R_x} + \vec{R_y} \qquad : \qquad \vec{R_x} \perp \vec{R_y} % \vec{R_x}
+$$
+
+$$
+\left.\begin{array}{c} R_x = R \cdot \cos \theta \\ R_y = R \cdot \sen \theta\end{array}\right\rbrace R^2 = {R_x}^2 + {R_y}^2
+$$
+
+
+\end{document}

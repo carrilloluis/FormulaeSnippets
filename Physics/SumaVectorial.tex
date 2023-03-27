@@ -1,0 +1,79 @@
+\documentclass[12pt, a5paper]{article}
+
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+%\usepackage{stix} % , bm}
+% \usepackage{fourier} % \usepackage{enumerate}
+% \usepackage[garamond]{mathdesign}
+%\usepackage{garamondx}
+\usepackage{tikz}
+% \usetikzlibrary{arrows}
+\usetikzlibrary{babel}
+% \usepackage{verbatim}
+
+%\usepackage[T1]{fontenc}
+%\geometry{textwidth=7cm}
+%\usepackage{tgbonum}
+% \usepackage{times} % Si funciona!!!
+%\usepackage{Lucida Sans Typewriter}
+%\usepackage{garamond}
+\usepackage{mathpazo} % GOOOD!!!!
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{ pdftitle = {Vectores},  pdfauthor = {Luis Carrillo Gutiérrez}, pdfsubject= {vector, componentes, descomposición ortogonal de un vector} }
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+
+\section*{Vector}
+\subsection*{Suma vectorial}
+\empty \indent \\
+\begin{tikzpicture}
+\draw (4.6, 2) node{$\Rightarrow$};
+\draw [very thick, ->] (0, 0) -- (1.6, 3);
+\draw (0.75, 1.8) node[left]{$\vec{A}$};
+\draw [very thick, ->] (0, 0) -- (4, 0);
+\draw (2, -0.35) node{$\vec{B}$};
+\draw (0.55, 0.4) node{$\theta$};
+% ->[dashed]
+\draw [very thick, ->] (5, 0) -- (6.6, 3);
+\draw [very thick, ->] (5, 0) -- (9, 0);
+\draw [dashed] (9, 0) -- (10.6, 3);
+\draw [dashed] (6.6, 3) -- (10.6, 3);
+\draw [dashed] (9, 0) -- (11, 0);
+\draw [dashed] (10.6, 0) -- (10.6, 3);
+\draw [gray] (0.4, 0.0) arc [radius=0.4, start angle=0, end angle=60];
+% jerarcas??
+\draw (5.75, 1.8) node[left]{$\vec{A}$};
+\draw (7, -0.35) node{$\vec{B}$};
+\draw [thick, ->] (5, 0) -- (10.6, 3);
+\draw (5.6, 0.0) arc [radius=0.6, start angle=0, end angle=30];
+\draw (5.9, 0.2) node{$\alpha$};
+\draw [gray] (9.4, 0.0) arc [radius=0.4, start angle=0, end angle=60];
+\draw (9.55, 0.4) node{$\theta$};
+\draw (7.6, 1.8) node{$\vec{R}$};
+\end{tikzpicture}
+
+$$
+\vec{R} = \vec{A} + \vec{B}
+$$
+
+$$
+% \norm{
+|\vec{R}|  = \sqrt{ |\vec{A}|^2 + |\vec{B}|^2 + 2 \cdot |\vec{A}| \cdot |\vec{B}| \cdot \cos \theta}
+$$
+
+$$
+R = \sqrt{ A^2 + B^2 + 2 \cdot A \cdot B \cdot \cos \theta}
+$$
+
+$$
+\alpha = \arctan{\dfrac{A \cdot \sen \theta}{B + A \cdot \cos \theta}}
+$$
+
+
+\end{document}
